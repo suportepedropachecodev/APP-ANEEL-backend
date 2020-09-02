@@ -1,0 +1,24 @@
+{
+  "name": "APP-ANEEL-backend",
+  "version": "1.0.0",
+  "description": "Backend responsável por raspar dados e armazena-los no banco mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suportepedropachecodev/APP-ANEEL-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suportepedropachecodev/APP-ANEEL-backend/issues"
+  },
+  "homepage": "https://github.com/suportepedropachecodev/APP-ANEEL-backend#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}
