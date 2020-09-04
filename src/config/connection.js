@@ -35,4 +35,5 @@ function connection(){
 
 };
 
-connection()
+//connection()
+module.exports = connection;
