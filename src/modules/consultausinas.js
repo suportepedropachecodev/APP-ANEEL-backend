@@ -10,6 +10,7 @@ const totpaginas = async (url)=>{
         let totaldeusinas = $('body > table:nth-child(4) > tbody > tr:nth-child(1) > td > table:nth-child(3) > tbody > tr.linhaBranca > td:nth-child(2)').text().trim();
         inteiro = Math.round(totaldeusinas)
         //console.log(inteiro);
-    })
+    });
+    return inteiro
 };
 module.exports = totpaginas;

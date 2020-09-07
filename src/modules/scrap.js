@@ -1,9 +1,12 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const classmongo = require('./classmongo');
 
 let dados = {};
 
 async function scrap(url){
+    await console.time('#TempoScraping');
+    await console.log(`Url raspada ${url}`)
     const {data} = await axios.get(url);
     const $ = cheerio.load(data);
 
@@ -38,8 +41,10 @@ async function scrap(url){
         fonte,
         potencia
     }
-    console.log(dados);
+    await classmongo.add(dados);
+    //console.log(dados);
     }
+    await console.timeEnd('#TempoScraping');
 };
-
-scrap('http://www2.aneel.gov.br/scg/gd/VerGD.asp?pagina=2&acao=buscar&login=&NomPessoa=&IdAgente=&DatConexaoInicio=&DatConexaoFim=')
+module.exports = scrap;
+//scrap('http://www2.aneel.gov.br/scg/gd/VerGD.asp?pagina=2&acao=buscar&login=&NomPessoa=&IdAgente=&DatConexaoInicio=&DatConexaoFim=')
